@@ -5,6 +5,10 @@
             <log level="custom">
                 <property name="Message" value="Hello World API Invoked"/>
             </log>
+            <log level="custom">
+                <property expression="get-property('env','SVOTOKEN_PASSWORD')" name="SVOTOKEN_PASSWORD" scope="default" type="STRING"/>
+                <property expression="get-property('env','SVOTOKEN_USERID')" name="SVOTOKEN_USERID" scope="default" type="STRING"/>
+            </log>
             <payloadFactory media-type="json">
                 <format>{"Hello":"World"}</format>
                 <args/>
